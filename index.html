@@ -25,17 +25,16 @@
   <!-- header end -->
   <main>
     <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
-      <div 
-      class="object-details w-full md:w-[60%] lg:w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="object-details w-full md:w-[60%] lg:w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
         <!-- card-1 -->
         <div class="card card-compact w-full bg-base-100 shadow-xl">
-          <figure><img class="w-50 h-auto mt-5" src="/images/triangle.png" alt="Triangle" /></figure>
+          <figure><img class="w-50 h-auto mt-5" src="/images/triangle.png" alt="" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Triangle</h2>
+            <h2 class="card-title" id="triangle-title">Triangle</h2>
             <p>Area (A) = 0.5 x b x h </p>
             <div class="shadow-xl mt-5">
-              <input type="text" placeholder="b" size="5"> cm 
-              <input type="text" placeholder="h" size="5"> cm
+              <input id="base-tangle" type="text" placeholder="b" size="5"> cm
+              <input id="height-tangle" type="text" placeholder="h" size="5"> cm
             </div>
             <div class="card-actions mt-5">
               <button class="btn bg-cyan-500 px-20 border-none" id="triangle-btn">Calculate</button>
@@ -46,11 +45,11 @@
         <div class="card card-compact w-full bg-base-100 shadow-xl">
           <figure><img class="w-50 h-auto mt-5" src="/images/rectangle.png" alt="Rectangle" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Rectangle</h2>
+            <h2 class="card-title" id="rectangle-title">Rectangle</h2>
             <p>Area (A) = 0.5 x l x w </p>
             <div class="shadow-xl mt-5">
-              <input type="text" placeholder="l" size="5"> cm 
-              <input type="text" placeholder="w" size="5"> cm
+              <input id="length-rtangle" type="text" placeholder="l" size="5"> cm
+              <input id="width-rtangle" type="text" placeholder="w" size="5"> cm
             </div>
             <div class="card-actions mt-5">
               <button class="btn bg-cyan-500 px-20 border-none" id="rectangle-btn">Calculate</button>
@@ -61,103 +60,67 @@
         <div class="card card-compact w-full bg-base-100 shadow-xl">
           <figure><img class="w-50 h-auto mt-5" src="/images/parallelogram.png" alt="Parallelogram" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Parallelogram</h2>
+            <h2 class="card-title" id="parallelogram-title">Parallelogram</h2>
             <p>Area (A) = 0.5 x b x h </p>
-            <div class="shadow-xl mt-5">
-              <input type="text" placeholder="b" size="5"> cm 
-              <input type="text" placeholder="h" size="5"> cm
-            </div>
-            <div class="card-actions mt-5">
-              <button class="btn bg-cyan-500 px-20 border-none" id="parallelogram-btn">Calculate</button>
-            </div>
+            <p class="text-center text-">b=10cm, h=12cm</p>
+        <button onclick="parallelogramCalc()" class="btn bg-cyan-500 w-full border-blue-500 mt-12">Calculate</button>
           </div>
         </div>
         <!-- card-4 -->
         <div class="card card-compact w-full bg-base-100 shadow-xl">
-          <figure><img class="w-50 h-auto mt-5" src="/images/rhombus.png" alt="Parallelogram" /></figure>
+          <figure><img class="w-50 h-auto mt-5" src="/images/rhombus.png" alt="" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Rhombus</h2>
+            <h2 class="card-title" id="rhombus-title">Rhombus</h2>
             <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
-            <div class="shadow-xl mt-5">
-              <input type="text" placeholder="d1" size="5"> cm 
-              <input type="text" placeholder="d2" size="5"> cm
-            </div>
-            <div class="card-actions mt-5">
-              <button class="btn bg-cyan-500 px-20 border-none" id="rhombus-btn">Calculate</button>
-            </div>
+            <p class="text-center text-">b=16cm, h=8cm</p>
+            <button onclick="rhombusCalc()" class="btn bg-cyan-500 w-full border-blue-500 mt-12">Calculate</button>
           </div>
         </div>
         <!-- card-5 -->
         <div class="card card-compact w-full bg-base-100 shadow-xl">
           <figure><img class="w-50 h-auto mt-5" src="/images/pentagon.png" alt="Pentagon" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Pentagon</h2>
+            <h2 class="card-title" id="pentagon-title">Pentagon</h2>
             <p>Area (A) = 0.5 x p x b </p>
-            <div class="shadow-xl mt-5">
-              <input type="text" placeholder="p" size="5"> cm 
-              <input type="text" placeholder="b" size="5"> cm
-            </div>
-            <div class="card-actions mt-5">
-              <button class="btn bg-cyan-500 px-20 border-none" id="pentagon-btn">Calculate</button>
-            </div>
+            <p class="text-center text-">p=6cm, b=10cm</p>
+            <button onclick="pentagonCalc()" class="btn bg-cyan-500 w-full border-blue-500 mt-12">Calculate</button>
           </div>
         </div>
         <!-- card-6 -->
         <div class="card card-compact w-full bg-base-100 shadow-xl">
           <figure><img class="w-50 h-auto mt-5" src="/images/ellipse.png" alt="Ellipse" /></figure>
           <div class="card-body items-center text-center">
-            <h2 class="card-title">Ellipse</h2>
+            <h2 class="card-title" id="ellipse-title">Ellipse</h2>
             <p>Area (A) = &pi;ab </p>;
-            <div class="shadow-xl mt-5">
-              <input type="text" placeholder="a" size="5"> cm 
-              <input type="text" placeholder="b" size="5"> cm
-            </div>
-            <div class="card-actions mt-5">
-              <button class="btn bg-cyan-500 px-20 border-none" id="parallelogram-btn">Calculate</button>
-            </div>
+            <p class="text-center text-">a=10cm, b=4cm</p>
+            <button onclick="ellipseCalc()" class="btn bg-cyan-500 w-full border-blue-500 mt-12">Calculate</button>
           </div>
         </div>
       </div>
-<!-- area calculation detail -->
-      <div class="cart-details w-full md:w-[30%] lg: w-[30%] mx-auto">
+
+      <!--TODO area calculation detail -->
+      <div class="cart-details w-full md:w-[30%] lg:w-[30%] mx-auto">
         <h1 class="text-3xl text-center font-bold underline mt-5">Area Calculation</h1>
         <div class="overflow-x-auto">
-            <table class="table w-full">
-                <!-- head -->
-                <thead>
-                    <tr>
-                    <!-- <th>No</th>
-              <th>Name</th>
-              <th>Total CM</th>
-              <th>Convert</th> -->
-                    </tr>
-                </thead>
-                <tbody id="table-container">
-                    <!-- row 1 -->
-                    <!-- <tr>
-              <th>1</th>
-              <td>Cy Ganderton</td>
-              <td>Quality Control Specialist</td>
-              <td>Blue</td>
-            </tr> -->
-                    <tr>
-                        <td>1</td>
-                        <td>Triangle</td>
-                        <td>5.00 C㎡</td>
-                        <td>
-                            <button class="btn bg-cyan-500 pl-1 pr-1">Convert to m^2</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+          <table class="table w-full">
+            <!-- head -->
+            <!-- <thead>
+              <tr>
+
+              </tr>
+            </thead> -->
+            <tbody id="table-main-body">
+
+            </tbody>
+          </table>
         </div>
-    </div>
+      </div>
     </section>
   </main>
 
 
-<!-- external js -->
-<script src="js/main.js"></script>
+  <!-- external js -->
+  <script src="js/main.js"></script>
 </body>
 
 </html>
