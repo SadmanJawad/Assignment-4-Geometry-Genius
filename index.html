@@ -2,47 +2,128 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Geometry Genius Sadman</title>
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.tailwindcss.com"></script>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sadman Geometry Genius Sadman</title>
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.tailwindcss.com"></script>
 
 </head>
 
 <body>
-    <header>
-        <div class="navbar bg-base-100 lg:px-12 shadow-xl">
-            <div class="flex-1">
-              <a class="btn btn-ghost normal-case text-xl">Interactive</a>
-              <p>Geometry Genius</p>
+  <header class="mx-5 mt-5">
+    <div class="navbar justify-between rounded-lg bg-blue-100 ">
+      <div class="px-5">
+        <a><span class="text-4xl font-bold">Interactive</span>
+          <br>
+          <span class="font-5xl">Geometry Genius</span></a>
+      </div>
+      <button class="btn bg-cyan-500 mx-5 px-12 border-none"><a href="./blog.html">Blog</a></button>
+    </div>
+  </header>
+  <!-- header end -->
+  <main>
+    <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
+      <div 
+      class="object-details w-full md:w-[60%] lg:w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- card-1 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/triangle.png" alt="Triangle" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Triangle</h2>
+            <p>Area (A) = 0.5 x b x h </p>
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="b" size="5"> cm 
+              <input type="text" placeholder="h" size="5"> cm
             </div>
-            <div class="flex-none">
-              <button class="btn btn-square btn-primary">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" class="inline-block w-5 h-5 stroke-current"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"></path></svg> -->
-                <a class="btn-blog p-2">Blog</a>
-              </button>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="triangle-btn">Calculate</button>
             </div>
           </div>
-    </header>
-    <main>
-        <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
-           <div class="object-details w-full md:w-[60%] lg:w-[80%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <!-- card-1 -->
-            <div class="card card-compact w-full bg-base-100 shadow-xl">
-                <figure><img class="w-50 h-auto mt-5" src="/images/triangle.png" alt="Triangle" /></figure>
-                <div class="card-body">
-                  <h2 class="card-title">Triangle</h2>
-                  <p>Area(A) = 0.5 * b * h</p>
-                  <div class="card-actions justify-end">
-                    <button class="btn btn-primary">Buy Now</button>
-                  </div>
-                </div>
-              </div>
-           </div>
-        </section>
-    </main>
+        </div>
+        <!-- card-2 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/rectangle.png" alt="Rectangle" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rectangle</h2>
+            <p>Area (A) = 0.5 x l x w </p>
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="l" size="5"> cm 
+              <input type="text" placeholder="w" size="5"> cm
+            </div>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="rectangle-btn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- card-3 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/parallelogram.png" alt="Parallelogram" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Parallelogram</h2>
+            <p>Area (A) = 0.5 x b x h </p>
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="b" size="5"> cm 
+              <input type="text" placeholder="h" size="5"> cm
+            </div>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="parallelogram-btn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- card-4 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/rhombus.png" alt="Parallelogram" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Rhombus</h2>
+            <p>Area (A) = 0.5 x d<sub>1</sub> x d<sub>2</sub> </p>
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="d1" size="5"> cm 
+              <input type="text" placeholder="d2" size="5"> cm
+            </div>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="rhombus-btn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- card-5 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/pentagon.png" alt="Pentagon" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Pentagon</h2>
+            <p>Area (A) = 0.5 x p x b </p>
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="p" size="5"> cm 
+              <input type="text" placeholder="b" size="5"> cm
+            </div>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="pentagon-btn">Calculate</button>
+            </div>
+          </div>
+        </div>
+        <!-- card-6 -->
+        <div class="card card-compact w-full bg-base-100 shadow-xl">
+          <figure><img class="w-50 h-auto mt-5" src="/images/ellipse.png" alt="Ellipse" /></figure>
+          <div class="card-body items-center text-center">
+            <h2 class="card-title">Ellipse</h2>
+            <p>Area (A) = &pi;ab </p>;
+            <div class="shadow-xl mt-5">
+              <input type="text" placeholder="a" size="5"> cm 
+              <input type="text" placeholder="b" size="5"> cm
+            </div>
+            <div class="card-actions mt-5">
+              <button class="btn bg-cyan-500 px-20 border-none" id="parallelogram-btn">Calculate</button>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+  </main>
 
 
 
