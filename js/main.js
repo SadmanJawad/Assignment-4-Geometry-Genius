@@ -1,4 +1,4 @@
-let serial = 0
+let serial = 0;
 
 // for card-1
 //!  triangle calculation
