@@ -3,7 +3,8 @@ let serial = 0
 // for card-1
 //!  triangle calculation
 document.getElementById('triangle-btn').addEventListener('click', function(){
-    serial += 1
+    serial += 1;
+
     const objectTitle = document.getElementById('triangle-title').innerText;
     const baseString = document.getElementById('base-tangle');
     const base = baseString.value;
@@ -26,6 +27,7 @@ document.getElementById('triangle-btn').addEventListener('click', function(){
 // ! rectangle calculation
 document.getElementById('rectangle-btn').addEventListener('click', function(){
     serial += 1 ;
+
     const objectTitle = document.getElementById('rectangle-title').innerText;
     const lengthString = document.getElementById('length-rtangle') ;
     const length = lengthString.value;

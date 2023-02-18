@@ -8,7 +8,13 @@
   <title>Sadman Geometry Genius Sadman</title>
   <link href="https://cdn.jsdelivr.net/npm/daisyui@2.50.1/dist/full.css" rel="stylesheet" type="text/css" />
   <script src="https://cdn.tailwindcss.com"></script>
-
+ 
+  <script>
+    // JavaScript code
+    function goToPage() {
+      window.location.href = 'blog.html';
+    }
+  </script>
 </head>
 
 <body>
@@ -19,15 +25,15 @@
           <br>
           <span class="font-5xl">Geometry Genius</span></a>
       </div>
-      <button class="btn bg-cyan-500 mx-5 px-12 border-none"><a href="./blog.html">Blog</a></button>
+      <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded transition duration-300 mx-5" onclick="goToPage()">Blog</button>
     </div>
   </header>
   <!-- header end -->
   <main>
     <section class="lg:px-12 flex flex-col md:flex-row lg:flex-row">
-      <div class="object-details w-full md:w-[60%] lg:w-[70%] mt-5 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="object-details w-full md:w-[60%] lg:w-[70%] mt-5 grid  sm:grid-cols-1 lg:grid-cols-3  gap-6">
         <!-- card-1 -->
-        <div class="card card-compact w-full bg-base-100 shadow-xl">
+        <div class="card card-compact w-full bg-rose-300 shadow-xl">
           <figure><img class="w-50 h-auto mt-5" src="/images/triangle.png" alt="" /></figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title" id="triangle-title">Triangle</h2>
@@ -91,7 +97,7 @@
           <figure><img class="w-50 h-auto mt-5" src="/images/ellipse.png" alt="Ellipse" /></figure>
           <div class="card-body items-center text-center">
             <h2 class="card-title" id="ellipse-title">Ellipse</h2>
-            <p>Area (A) = &pi;ab </p>;
+            <p>Area (A) = &pi;ab </p>
             <p class="text-center text-">a=10cm, b=4cm</p>
             <button onclick="ellipseCalc()" class="btn bg-cyan-500 w-full border-blue-500 mt-12">Calculate</button>
           </div>

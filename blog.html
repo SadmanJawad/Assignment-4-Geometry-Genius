@@ -5,8 +5,47 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog Assignment 5</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/9341337044.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <h1>Hi</h1>
+<body class="font-mono mx-5 mt-5">
+    <h1 class="text-3xl text-center font-bold mb-3 underline">Questions</h1>
+<!-- question 1 -->
+    <div class="bg-emerald-100">
+    <h2 class="text-2xl font-semibold"><i class="fa-solid fa-circle-check mx-1"></i> What is DOM and what is the purpose of DOM?</h2><br>
+    <p class="ml-3">DOM means Document Object Model.Document comes from HTML page.Object comes from element of html. such as:- head, body, div, p etc.Model means HTML pre-structure which comes from a flowchart, when we start to write code we simply take document then html then head and body. Here in the head tag we select a name of project title. Then in body tag we use div.Divison contains h1 as well as p (paragraph).
+    </p>
+    <p class="ml-3">The purpose of DOM structure presentation of every element of html as node.DOm allows to manipulate, update and can access the element and tags on the page using JavaScript of function or event.</p>
+    </div>
+<br>
+<!-- question 2 -->
+    <div class="bg-pink-200">
+        <h2 class="text-2xl font-semibold"><i class="fa-solid fa-circle-check mx-1"></i> How will you select HTML elements using DOM? Name the DOM methods</h2><br>
+        <p class="ml-3">
+            To select HTML elements we have to use DOM and DOM helps to use various types of methods depending on the need of code.
+            Here are some common methods: 
+               <div class="ml-3">
+                <li>getElementById()</li>
+                <li>getElementsByTagName()</li>
+                <li>getElementsByClassName()</li>
+                <li>querySelector()</li>
+                <li>querySelectorAll()</li>
+               </div>
+        </p>
+    </div>
+    <!-- question 3 -->
+    <div class="bg-gray-200 mt-5">
+        <h2 class="text-2xl font-semibold"><i class="fa-solid fa-circle-check mx-1"></i> What is event bubble?</h2><br>
+        <p class="ml-3">
+            Event bubbling in a DOM where event-bubble handle a recieved event and the event bubbles up to its parent and child elements in the DOM tree untill it gets to the root element.
+            To prevent event bubbling we use stopPropagation() method of the event object.
+            When handling events an event object is set before handling function.
+        </p>
+    </div>
+    <!-- question 4  -->
+    <div class="bg-yellow-200 mt-5">
+        <h2 class="text-2xl font-semibold"><i class="fa-solid fa-circle-check mx-1"></i> What is event bubble?</h2><br>
+        <p class="ml-3 mb-5 pb-5">
+            A callback function is a function which is accesible by another function.It is run when the first function stop execute and complete.Actually javascript runs in top-down order.Callback function make sure that a function is not going to run before a task is complete but will run after the task has completed. It helps us to code asynchronus position to prevent error.
 </body>
 </html>
