@@ -80,12 +80,10 @@ function ellipseCalc(){
     setTableValue(serial, title, area.toFixed(2));
 }
 
-// area calculation function
+//! area calculation function
 function setTableValue(serial, objectTitle , area){
 const table = document.getElementById('table-main-body');
-
 const li = document.createElement('tr');
-
 li.innerHTML = 
 `
 <tr>
